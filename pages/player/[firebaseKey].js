@@ -19,10 +19,16 @@ export default function ViewPlayer() {
         <div className="d-flex flex-column" />
         <div className="text-white ms-5 details">
           <h5>
-            {playerDetails.name}
-            {playerDetails.class}
-            {playerDetails.species}
-            {playerDetails.level}
+            <div className="d-flex flex-column">
+              <img src={playerDetails.image} alt={playerDetails.first_name} style={{ height: '200px', width: '200px' }} />
+            </div>
+            Name:{playerDetails.name}
+            <br />
+            Class:{playerDetails.class}
+            <br />
+            Species:{playerDetails.species}
+            <br />
+            Level{playerDetails.level}
           </h5>
           <hr />
         </div>

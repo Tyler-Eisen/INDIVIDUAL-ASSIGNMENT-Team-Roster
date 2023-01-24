@@ -12,6 +12,7 @@ const initialState = {
   class: '',
   species: '',
   level: '',
+  image: '',
 };
 function PlayerForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
