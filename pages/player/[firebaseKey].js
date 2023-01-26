@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import { Image } from 'react-bootstrap';
 import { viewPlayerDetails } from '../../api/playerData';
 
 export default function ViewPlayer() {
@@ -20,15 +21,15 @@ export default function ViewPlayer() {
         <div className="text-white ms-5 details">
           <h5>
             <div className="d-flex flex-column">
-              <img src={playerDetails.image} alt={playerDetails.first_name} style={{ height: '200px', width: '200px' }} />
+              <Image src={playerDetails.image} alt={playerDetails.image} style={{ height: '200px', width: '200px' }} />
             </div>
-            Name:{playerDetails.name}
+            Name: {playerDetails.name}
             <br />
-            Class:{playerDetails.class}
+            Class: {playerDetails.class}
             <br />
-            Species:{playerDetails.species}
+            Species: {playerDetails.species}
             <br />
-            Level{playerDetails.level}
+            Level: {playerDetails.level}
           </h5>
           <hr />
         </div>

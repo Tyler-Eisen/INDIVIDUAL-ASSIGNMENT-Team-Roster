@@ -9,7 +9,7 @@ import { getPlayers, updatePlayer, createPlayer } from '../../api/playerData';
 
 const initialState = {
   name: '',
-  class: '',
+  playerClass: '',
   species: '',
   level: '',
   image: '',
@@ -20,9 +20,13 @@ function PlayerForm({ obj }) {
   const { user } = useAuth();
 
   useEffect(() => {
-    getPlayers(user.uid).then(setFormInput);
+    // getPlayers(user.uid).then(setFormInput);
+  //   getPlayers(user.uid).then((players) => setFormInput(players[2]));
 
-    if (obj.firebaseKey) setFormInput(obj);
+    //   if (obj.firebaseKey) setFormInput(obj);
+    // }, [obj, user]);
+
+    if (!obj.firebaseKey) { getPlayers(user.uid).then(setFormInput); } else { setFormInput(obj); }
   }, [obj, user]);
 
   const handleChange = (e) => {
@@ -49,7 +53,7 @@ function PlayerForm({ obj }) {
     <Form onSubmit={handleSubmit}>
       <h2 className="text-white mt-5">{obj.firebaseKey ? 'Update' : 'Create'} Player</h2>
 
-      {/* TITLE INPUT  */}
+      {/* Name INPUT  */}
       <FloatingLabel controlId="floatingInput1" label="Player Name" className="mb-3">
         <Form.Control
           type="text"
@@ -73,25 +77,34 @@ function PlayerForm({ obj }) {
         />
       </FloatingLabel>
 
-      {/* PRICE INPUT  */}
+      {/* Species INPUT  */}
       <FloatingLabel controlId="floatingInput3" label="Player Species" className="mb-3">
         <Form.Control
           type="text"
           placeholder="Enter Species"
-          name="Species"
+          name="species"
           value={formInput.species}
           onChange={handleChange}
           required
         />
       </FloatingLabel>
+      <FloatingLabel controlId="floatingInput3" label="Player Class" className="mb-3">
+        <Form.Control
+          type="text"
+          placeholder="Enter Player Class"
+          name="playerClass"
+          value={formInput.playerClass}
+          onChange={handleChange}
+          required
+        />
+      </FloatingLabel>
 
-      {/* DESCRIPTION TEXTAREA  */}
+      {/* Level TEXTAREA  */}
       <FloatingLabel controlId="floatingTextarea" label="Level" className="mb-3">
         <Form.Control
           as="textarea"
           placeholder="Level"
-          style={{ height: '100px' }}
-          name="Level"
+          name="level"
           value={formInput.level}
           onChange={handleChange}
           required
@@ -109,7 +122,7 @@ PlayerForm.propTypes = {
     name: PropTypes.string,
     image: PropTypes.string,
     species: PropTypes.string,
-    clsss: PropTypes.string,
+    playerClass: PropTypes.string,
     Level: PropTypes.number,
     firebaseKey: PropTypes.string,
   }),

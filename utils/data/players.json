@@ -3,7 +3,7 @@
   "firebaseKey":"-NMKGazSoZY-VhrrhQKg",
   "name":"Pepper",
   "species":"Satyr",
-  "class":" Aberrant Mind Sorcerer",
+  "playerClass":" Aberrant Mind Sorcerer",
   "level":8,
   "uid": "zCJJbruUfRU1frSKeXzv6C4xPiS2",
   "image":"https://i.redd.it/uezsa828x6551.jpg"
@@ -13,7 +13,7 @@
   "firebaseKey":"-NMKGazW0SqpinsfTT6g",
   "name":"Vash",
   "species":"Human",
-  "class":"Hexblade Warlock",
+  "playerClass":"Hexblade Warlock",
   "level":8,
   "uid": "zCJJbruUfRU1frSKeXzv6C4xPiS2",
   "image":"https://i.pinimg.com/550x/ae/1e/f7/ae1ef7b8f6558cf3a725bcc75777e3c8.jpg"
@@ -23,7 +23,7 @@
   "firebaseKey":"-NMKGazZgqNTnj-nDxpg",
   "name":"Dripp",
   "species":"Firbolg",
-  "class":"Bladesong Wizard",
+  "playerClass":"Bladesong Wizard",
   "level":8,
   "uid": "zCJJbruUfRU1frSKeXzv6C4xPiS2",
   "image":"https://cdn.costumewall.com/wp-content/uploads/2017/02/nightcrawler.jpg"
@@ -34,7 +34,7 @@
     "firebaseKey":"-NMKGazbNEhN5464fBoC",
     "name":"Winna",
     "species":"Shapeshifter",
-    "class":"Circle of the Moon Druid",
+    "playerClass":"Circle of the Moon Druid",
     "level":8 ,
     "uid": "zCJJbruUfRU1frSKeXzv6C4xPiS2",
     "image":"https://pbs.twimg.com/media/DVhzU6xV4AAh1eS.jpg"
@@ -46,7 +46,7 @@
     "firebaseKey":"-NMKGazfKeqBj1HS0K1a",
     "name":"Preecher",
     "species":"Kenku",
-    "class":"Pact of the Great Old One Warlock",
+    "playerClass":"Pact of the Great Old One Warlock",
     "level":8,
     "uid": "zCJJbruUfRU1frSKeXzv6C4xPiS2",
     "image":"image.png"
@@ -56,7 +56,7 @@
     "firebaseKey":"-NMKGaziM8bfb45SjwpB",
     "name":"Benny",
     "species":"Orc",
-    "class":"Path of Wild Magic Barbarian",
+    "playerClass":"Path of Wild Magic Barbarian",
     "level":8,
     "uid": "zCJJbruUfRU1frSKeXzv6C4xPiS2",
     "image":"https://64.media.tumblr.com/4687491fe2015711c2c4e4bbb148d666/tumblr_pu8ywgM0pU1qmqyt0o1_1280.jpg"
@@ -65,7 +65,7 @@
     "firebaseKey":"-NMKJoNvMtFNUBCk4msL",
     "name":"Hati",
     "species":"Loxodon",
-    "class":"Twilight Domain Cleric",
+    "playerClass":"Twilight Domain Cleric",
     "level":8,
     "uid":"zCJJbruUfRU1frSKeXzv6C4xPiS2",
     "image":"https://64.media.tumblr.com/715b4aecabc1f4decf91c69bc4ae1b86/afcba891b83771b0-cf/s1280x1920/06b0b7759902305f18d6db11c04263ee7970fb3c.jpg"
