@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { deletePlayer } from '../api/playerData';
 
 function PlayerCard({ playerObj, onUpdate }) {
-  const deleteThisBook = () => {
+  const deleteThisPlayer = () => {
     if (window.confirm(`Delete ${playerObj.name}?`)) {
       deletePlayer(playerObj.firebaseKey).then(() => onUpdate());
     }
@@ -21,10 +21,10 @@ function PlayerCard({ playerObj, onUpdate }) {
           <Button variant="primary" className="m-2">VIEW</Button>
         </Link>
         {/* DYNAMIC LINK TO EDIT THE BOOK DETAILS  */}
-        <Link href={`/players/edit/${playerObj.firebaseKey}`} passHref>
+        <Link href={`/player/edit/${playerObj.firebaseKey}`} passHref>
           <Button variant="info">EDIT</Button>
         </Link>
-        <Button variant="danger" onClick={deleteThisBook} className="m-2">
+        <Button variant="danger" onClick={deleteThisPlayer} className="m-2">
           DELETE
         </Button>
       </Card.Body>

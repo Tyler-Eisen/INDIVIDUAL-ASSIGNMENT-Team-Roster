@@ -2,7 +2,7 @@ import { Button } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useAuth } from '../utils/context/authContext';
-import getPlayers from '../api/playerData';
+import { getPlayers } from '../api/playerData';
 import PlayerCard from '../components/PlayerCard';
 
 function Home() {
@@ -16,12 +16,12 @@ function Home() {
 
   useEffect(() => {
     getAllThePlayers();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div className="text-center my-4">
-      <Link to="/players/new">
+      <Link href="/player/new" passHref>
         <Button>Add A Player</Button>
       </Link>
       <div className="d-flex flex-wrap">
