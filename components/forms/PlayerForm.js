@@ -5,7 +5,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
 import { useAuth } from '../../utils/context/authContext';
-import { getPlayers, updatePlayer, createPlayer } from '../../api/playerData';
+import { updatePlayer, createPlayer } from '../../api/playerData';
 
 const initialState = {
   name: '',
@@ -23,10 +23,7 @@ function PlayerForm({ obj }) {
     // getPlayers(user.uid).then(setFormInput);
   //   getPlayers(user.uid).then((players) => setFormInput(players[2]));
 
-    //   if (obj.firebaseKey) setFormInput(obj);
-    // }, [obj, user]);
-
-    if (!obj.firebaseKey) { getPlayers(user.uid).then(setFormInput); } else { setFormInput(obj); }
+    if (obj.firebaseKey) setFormInput(obj);
   }, [obj, user]);
 
   const handleChange = (e) => {

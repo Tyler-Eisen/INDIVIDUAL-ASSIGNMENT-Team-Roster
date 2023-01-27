@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { clientCredentials } from '../utils/client';
 
 const endpoint = clientCredentials.databaseURL;
@@ -56,17 +57,26 @@ const getSinglePlayer = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const createPlayer = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/players.json`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(payload),
-  })
-    .then((response) => response.json())
-    .then((data) => resolve(data))
-    .catch(reject);
+// const createPlayer = (payload) => new Promise((resolve, reject) => {
+//   fetch(`${endpoint}/players.json`, {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(payload),
+//   })
+//     .then((response) => response.json())
+//     .then((data) => resolve(data))
+//     .catch(reject);
+// });
+
+const createPlayer = (playerObj) => new Promise((resolve, reject) => {
+  axios.post(`${endpoint}/players.json`, playerObj)
+    .then((response) => {
+      const payload = { firebaseKey: response.data.name };
+      axios.patch(`${endpoint}/players/${response.data.name}.json`, payload)
+        .then(resolve);
+    }).catch(reject);
 });
 
 const updatePlayer = (payload) => new Promise((resolve, reject) => {
