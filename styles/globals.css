@@ -21,3 +21,7 @@ body {
   background-color:  #3c1361;
   color: olive;
 }
+
+.logoutBtn{
+  float: right
+}
